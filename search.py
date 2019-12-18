@@ -142,7 +142,20 @@ def uniformCostSearch(problem):
   start_state = (problem.getStartState())
   acoes = []
   cost = 0
-  
+  prioridade.push((tart_state, acoes, custo), custo)
+
+  while not prioridade.isEmpty():
+    remover = prioridade.pop()
+
+    if problem.isGoalState(removed [0]):
+      return remover [1]
+
+    if remover[0] not in visitado:
+      visitado[remover[0]] = True
+
+      for sucessor, novo, prox in problem.getSuccesors(remover[0])
+        if sucessor and sucessor not in visitado:
+          prioridade.push((sucessor, remover[1]+[novo], remover[2] + prox),remover[2]+prox)
   
   util.raiseNotDefined()
 
